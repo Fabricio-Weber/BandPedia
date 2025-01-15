@@ -2,7 +2,7 @@ namespace BandPedia;
 
 public class Music
 {
-    public string Name{get;  set;}
+    public string Name{get;}
     public Band Artist { get;  }
     public string Album {get;  set;}
     public string Genre { get;  set; }
@@ -13,9 +13,10 @@ public class Music
     
     public string Description => $"{Name} - {Artist} - {Album}";
 
-    public Music(Band band)
+    public Music(Band band, string name)
     {
         Artist = band;
+        Name = name;
     }
 
   

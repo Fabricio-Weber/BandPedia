@@ -7,27 +7,27 @@ void Main()
     // Music music1 = new Music("East Hastings", "Godspeed You! Black Emperor", "F#A#", "Post Rock", 1020, true); 
     // Console.WriteLine($"{music1.Description}");
     Band deftones = new Band("Deftones");
-    deftones.Name = "Deftones";
-    
-    Album whitePony = new Album();
-    whitePony.Name = "White Pony";
-    
-    Music music1 = new Music(deftones);
-    music1.Name = "Digital Bath";
+    Album whitePony = new Album("White Pony");
 
+    Music music1 = new Music(deftones,"Digital Bath" );
     music1.Runtime = 240;
+    music1.Available = true;
     
-    Music music2 = new Music(deftones);
-    music2.Name = "Pink Maggit";
+    Music music2 = new Music(deftones,"Pink Maggit" )
+    {
+        Runtime = 240,
+        Available = true
+    };
 
-    music2.Runtime = 360;
 
-    whitePony.AddMusic(music1);
-    whitePony.AddMusic(music2);
     
 
     deftones.AddAlbum(whitePony);
     deftones.ShowDiscography();
+    music1.ShowInfo();
+    music2.ShowInfo();
+    
+    
 
 
 }

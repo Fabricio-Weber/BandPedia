@@ -3,11 +3,16 @@ namespace BandPedia;
 public class Album
 {
     private List<Music> musics = new List<Music>();
-    public string Name { get; set; }
+    public string Name { get;}
     public int Runtime => musics.Sum(m => m.Runtime);
     public void AddMusic(Music music)
     {
         musics.Add(music);
+    }
+
+    public Album(string name)
+    {
+        Name = name;
     }
     public void ShowMusics()
     {
