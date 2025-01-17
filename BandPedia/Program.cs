@@ -27,6 +27,11 @@ void Main()
     music1.ShowInfo();
     music2.ShowInfo();
     
+    Podcast podTest = new Podcast("Pod Test", "Host Test");
+    Episode episodeTest = new Episode("Pod Test", podTest);
+    podTest.AddEpisode(episodeTest);
+    podTest.showInfo();
+    
     
 
 

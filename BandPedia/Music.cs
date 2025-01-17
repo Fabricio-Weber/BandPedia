@@ -4,8 +4,8 @@ public class Music
 {
     public string Name{get;}
     public Band Artist { get;  }
-    public string Album {get;  set;}
-    public string Genre { get;  set; }
+    public string Album {get; }
+    public string Genre { get;  }
     public int Runtime { get;  set; }
     public bool Available { get;  set; }
     
